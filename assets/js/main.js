@@ -2,35 +2,17 @@
 const navMenu = document.getElementById("nav-menu"),
   navToggle = document.getElementById("nav-toggle"),
   navClose = document.getElementById("nav-close");
+const icon = document.getElementById("moon-icon");
 
-// //////////////////////////////////////////////////////////////////////////////////////////////////
-// By me
+icon.onclick = function () {
+  document.body.classList.toggle("dark-theme");
+  if (document.body.classList.contains("dark-theme")) {
+    icon.src = "./assets/img/sun.png";
+  } else {
+    icon.src = "./assets/img/moon.png";
+  }
+};
 
-const changeColor = document.querySelector(".main");
-const myBtn = document.querySelector(".MyButton");
-
-if (myBtn) {
-  myBtn.addEventListener("click", () => {
-    changeColor.classList.toggle("show");
-  });
-}
-
-// By me
-// //////////////////////////////////////////////////////////////////////////////////////////////////
-
-/*Menu Show*/
-if (navToggle) {
-  navToggle.addEventListener("click", () => {
-    navMenu.classList.add("show-menu");
-  });
-}
-
-/*Menu hidden */
-if (navClose) {
-  navClose.addEventListener("click", () => {
-    navMenu.classList.remove("show-menu");
-  });
-}
 /*=============== REMOVE MENU MOBILE ===============*/
 const navLink = document.querySelectorAll(".nav__link");
 
