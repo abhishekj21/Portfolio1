@@ -1030,3 +1030,11 @@ li {
 .Testimonial-second-Image {
   border-radius: 10%;
 }
+
+.home {
+  position: relative;
+}
+.home-sub {
+  position: absolute;
+  top: 0;
+}
