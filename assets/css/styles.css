@@ -936,6 +936,9 @@ li {
     font-size: var(--h2-font-size);
     margin-bottom: 1rem;
   }
+  .certificate__link {
+    padding: 3rem 3rem 2rem;
+  }
   .certificate__title i {
     font-size: 2rem;
   }
@@ -1059,7 +1062,7 @@ li {
   justify-content: center;
 } */
 .certificate__card {
-  background-color: var(--first-color);
+  background-color: var(--body-color);
   padding: 10px;
 }
 .certificate {
