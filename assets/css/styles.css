@@ -762,6 +762,21 @@ li {
     font-size: 40px;
     font-weight: 500;
   }
+  .work__container {
+    grid-auto-flow: column; /* This arranges items in a single row */
+    grid-auto-columns: minmax(
+      200px,
+      1fr
+    ); /* Set each card to a minimum width */
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    gap: 16px; /* Space between cards */
+    cursor: grab;
+    width: 100%;
+  }
+  .work__container::-webkit-scrollbar {
+    display: none; /* Hide scrollbar for Chrome, Safari, and WebKit browsers */
+  }
   /* testimonial */
   .card__container {
     padding-block: 4rem;
@@ -770,7 +785,7 @@ li {
 /* For medium devices */
 @media screen and (min-width: 540px) {
   .home__container,
-  .work__container,
+  /* .work__container, */
   .certificate__container,
   .info__container,
   .services__container,
@@ -778,6 +793,14 @@ li {
     /* grid-template-columns: 350px; */
     grid-template-columns: 400px;
     justify-content: center;
+  }
+  .work__container {
+    grid-auto-flow: column;
+    grid-auto-columns: minmax(400px, 1fr);
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    cursor: grab;
+    width: 100%;
   }
 }
 
@@ -801,6 +824,7 @@ li {
   }
   .work__container {
     grid-template-columns: repeat(2, 350px);
+    grid-auto-flow: row;
   }
   .info__container {
     grid-template-columns: initial;
