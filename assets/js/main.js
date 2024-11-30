@@ -1,5 +1,5 @@
 /*=============== SHOW MENU ===============*/
-const navMenu = document.getElementById("nav-menu"),
+const NavMenu = document.querySelector(".nav__menu"),
   navToggle = document.getElementById("nav-toggle"),
   navClose = document.getElementById("nav-close");
 const icon = document.getElementById("moon-icon");
@@ -13,6 +13,15 @@ icon.onclick = function () {
   }
 };
 
+// Show navigation menu
+navToggle.addEventListener("click", () => {
+  NavMenu.classList.add("show");
+});
+
+// Hide navigation menu
+navClose.addEventListener("click", () => {
+  NavMenu.classList.remove("show");
+});
 /*=============== REMOVE MENU MOBILE ===============*/
 const navLink = document.querySelectorAll(".nav__link");
 

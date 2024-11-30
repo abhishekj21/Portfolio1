@@ -201,9 +201,10 @@ img {
     top: 0;
   }
   .nav__menu {
+    display: none;
     position: fixed;
     top: 0;
-    right: -100%;
+    left: -100%;
     background-color: hsl(var(--hue), 70%, 4%, 0.2);
     backdrop-filter: blur(16px);
     --webkit-backdrop-filter: blur(16px);
@@ -211,6 +212,11 @@ img {
     height: 100%;
     padding: 7rem 3rem;
     transition: right 0.4s;
+  }
+  /* Show Class for Toggling */
+  .nav__menu.show {
+    left: 0;
+    display: block; /* Visible when toggled */
   }
 }
 
@@ -256,11 +262,6 @@ li {
   width: 30%;
 }
 
-.nav__close {
-  position: absolute;
-  top: 1rem;
-  right: 1.5rem;
-}
 /* Show menu */
 .show-menu {
   right: 0;
